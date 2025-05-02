@@ -31,7 +31,7 @@ namespace BrokeProtocol.Client.UI
 				while (enumerator.MoveNext())
 				{
 					ShWearable w = enumerator.Current;
-					if (!Enumerable.Any<ShWearable>(this.wearables, (ShWearable x) => x && x.name == w.name))
+					if (!this.wearables.Any((ShWearable x) => x && x.name == w.name))
 					{
 						int type = (int)w.type;
 						if (this.wearables[type])
